@@ -1,0 +1,692 @@
+body{
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+    z-index: 1000;
+
+}
+
+.navbar .logo h3{
+    color: #333;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    position: relative;
+    color: rgb(119, 115, 115);
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    color: rgb(119, 115, 115);
+}
+
+.navbar ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #3ea8f3;
+    transition: width 0.3s;
+}
+.navbar ul li a:hover::after{
+    width: 100%;   
+}
+
+.username-btn button{
+    padding: 12px 20px;
+    border: none;
+    background-color: #ebf8fe;
+    border-radius: 10px;
+    color: #91d7ff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero-section{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.hero-section .hero-text{
+    flex: 1;
+    padding: 60px 80px;
+    width: 50%;
+    font-size: 20px;
+}
+
+.hero-section .hero-text h1{
+    font-size: 48px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.hero-section .hero-text h1 span{
+    color: #3ea8f3;
+}
+
+.hero-section .hero-text p{
+    margin: 20px 0;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.hero-section .hero-text button{
+    padding: 15px 30px;
+    border: none;
+    background-color: #3ea8f3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero-section .hero-image{
+    flex: 1;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.hero-section .hero-image img{
+    width: 80%;
+    margin-top: 10px;
+    height: auto;
+}
+
+.achievements-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #3ea9fa;
+}
+
+.achievements-section h2{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.achievements-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+.achievements-cards h3{
+    font-size: 28px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.achievements-cards p{
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+
+.booking-services{
+    padding: 60px 80px;
+    display: flex;
+    gap: 20px;
+}
+
+.services-list{
+    flex: 1;
+    width: 65%;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.services-list h2{
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0;
+}
+
+.services-list p{
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #666;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 0;
+}
+
+.services-ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.services-ul span{
+    font-weight: 400;
+    color: #767bd8;
+}
+
+.services-ul li{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services-ul button{
+    padding: 10px 20px;
+    border: none;
+    background-color: #3ea8f3;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cart-and-booking {
+    flex: 1;
+    width: 35%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cart-items {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cart-items h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #6b6b6b;
+}
+
+.cart-items table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top : 10px;
+}
+
+.total-row{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #222;
+}
+
+.total-row span{
+    margin-right: 50px;
+    padding-right: 20px;
+}
+
+.cart-items th{
+    background: lightgray;
+    color: #333;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.cart-items td{
+    padding: 12px;
+    font-size: 15px;
+    color: #6e6e6e;
+    border-bottom: 1px solid #eee;
+}
+
+.booking-form{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.booking-form h2{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.booking-form form {
+    width: 100%;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 8px 0px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+}
+
+.booking-form button{
+    padding: 12px 20px;
+    border: none;
+    background-color: #3ea8f3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.services-highlights{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 60px 80px;
+}
+
+.services-highlights .card{
+    flex: 1;
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+.services-highlights .card img{
+    width: 80px;
+    height: 80px;
+}
+
+.services-highlights .card h4{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.services-highlights .card p{
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    padding: 0 5px;
+    margin: 0;
+}
+
+.newsletter{
+    padding: 80px 100px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #3ea8f3;
+}
+
+.newsletter-heading{
+    flex: 1;
+    width: 30%;
+}
+
+.newsletter-heading h1{
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0;
+}
+
+.newsletter-form{
+    flex: 1;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.newsletter-form form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.newsletter-form form div{
+    display: flex;
+    gap: 15px;
+}
+
+.newsletter-form input{
+    flex: 1;
+    padding: 15px 20px;;
+    background: #4bb5f9;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.newsletter-form input::placeholder {
+    color: #ccc;
+}
+
+.newsletter-form button{
+    padding: 15px 20px;
+    border: none;
+    background-color: #fff;
+    color: #3ea8f3;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+}
+
+.footer{
+    background-color: #f6f8fa;
+    color: #333;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-about h1{
+    font-size: 32px;
+    margin-bottom: 23px;
+}
+
+.footer-about h4{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.footer-about p{
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li{
+    margin: 8px 0;
+}
+
+.footer-links li a{
+    text-decoration: none;
+    color: #666;
+}
+
+.footer-links li a:hover{
+    color: #000;
+}
+
+.footer-contact p{
+    margin: 8px 0;
+    color: #666;
+}
+
+.footer-social a{
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+
+@media(max-width: 1024px){
+    .navbar{
+        padding: 0px 30px;
+    }
+
+    .hero-section{
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .hero-section .hero-text{
+        padding: 40px;
+        font-size: 18px;
+    }
+
+    .achievements-section{
+        padding: 20px 40px;
+    }
+
+    .booking-services{
+        padding: 40px;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .services-list{
+        width: 60%;
+    }
+
+    .cart-and-booking {
+        width: 40%;
+    }
+
+    .services-highlights{
+        padding: 40px;
+        gap: 15px;
+    }
+
+    .newsletter{
+        padding: 50px;
+    }
+
+    .footer{
+        padding: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section .hero-text {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .hero-section .hero-image img {
+        width: 90%;
+    }
+
+    .achievements-section {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .achievements-cards {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .booking-services {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .services-list {
+        width: 100%;
+    }
+
+    .cart-and-booking {
+        width: 100%;
+    }
+
+    .services-highlights {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .newsletter-heading,
+    .newsletter-form {
+        width: 100%;
+        flex: unset;
+    }
+
+    .newsletter-form form div {
+        flex-direction: column;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .navbar .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 28px !important;
+    }
+
+    .hero-section .hero-text {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .services-ul li {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .services-ul button {
+        width: 100%;
+    }
+
+    .cart-items h2 {
+        font-size: 18px;
+    }
+
+    .total-row {
+        font-size: 16px;
+    }
+
+    .booking-form input {
+        font-size: 14px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .booking-form button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .achievements-section h2 {
+        font-size: 24px;
+    }
+
+    .achievements-cards h3 {
+        font-size: 22px;
+    }
+
+    .services-highlights .card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .newsletter-heading h1 {
+        font-size: 26px;
+    }
+
+    .newsletter-form input {
+        padding: 12px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
